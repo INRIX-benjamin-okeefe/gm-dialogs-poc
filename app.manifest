@@ -1,0 +1,12 @@
+{
+    "id"          : "sdk.user.gm-dialogs-poc",
+    "name"        : "gm-dialogs-poc",
+    "css"         : [ "appStylesheet.css" ],
+    "template"    : "appLayout.html",
+    "view"        : "appView.js",
+    "controller"  : "appController.js",
+    "permissions" : [ ],
+    "categoryId"  : "14",
+    "date"        : "2017-03-28",
+    "version"     : "1.0.0"
+}
