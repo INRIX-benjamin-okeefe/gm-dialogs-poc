@@ -18,13 +18,14 @@ define(function (require) {
                 });
 
                 const addToListControlDialogConfig = {
+                    layout: 'css',
                     itemType: 'radio',
                     height: 500,
                     width: 800,
                     data: [
-                        { text: 'Add to Library', status: '' },
-                        { text: 'Add to Playlist', status: '' },
-                        { text: 'Create Station', status: '' }
+                        { text: 'Add to Library' },
+                        { text: 'Add to Playlist' },
+                        { text: 'Create Station' }
                     ],
                     itemClick: (eventKey, list, model, event) => {
                         alert('click!');
