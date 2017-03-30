@@ -10,39 +10,47 @@ define(function (require) {
     return class extends ModuleView {
         started () {
             return super.started().then(() => {
-                let carouselButton, contextMenuButton, carouselDialogConfig, contextMenuDialogConfig;
-                    
-                carouselButton = new Button({
+                const contextMenuButton = new Button({
                     model: {
-                        text: 'Display Carousel',
-                    },
-                    click: this.carouselButtonClick.bind(this)
-                });
-
-                contextMenuButton = new Button({
-                    model: {
-                        text: 'Display Context Menu',
+                        text: 'Display "Add To" List Control Dialog',
                     },
                     click: this.contextMenuButtonClick.bind(this)
                 });
 
-                carouselDialogConfig = new DialogConfig.ListDialog({}).build();
-                this.carouselDialog = new Dialog(carouselDialogConfig);
+                const addToListControlDialogConfig = {
+                    itemType: 'radio',
+                    height: 500,
+                    width: 800,
+                    data: [
+                        { text: 'Add to Library', status: '' },
+                        { text: 'Add to Playlist', status: '' },
+                        { text: 'Create Station', status: '' }
+                    ],
+                    itemClick: (eventKey, list, model, event) => {
+                        alert('click!');
+                    }
+                }
 
-                contextMenuDialogConfig = new DialogConfig.ListDialog({}).build();
-                this.contextMenuDialog = new Dialog(contextMenuDialogConfig);
+                const addToListControlDialog = new DialogConfig.ListControlDialog(addToListControlDialogConfig)
+                .addButton('Cancel', {
+                    text: 'Cancel'
+                })
+                .addButton('Ok', {
+                    text: 'Ok'
+                }).build();
 
-                carouselButton.render(this.getView());
+                this.addToListControlDialog = new Dialog(addToListControlDialog);
+
                 contextMenuButton.render(this.getView());
             });
         }
 
         carouselButtonClick () {
-            this.carouselDialog.show();
+            
         }
 
         contextMenuButtonClick () {
-            this.contextMenuDialog.show();
+            this.addToListControlDialog.show();
         }
     };
 });

@@ -1,1 +1,43 @@
-/* Use this CSS file to define the styling for your application */
+[data-oc-control=ListControl] {
+    height: 400px !important;
+    width: 800px !important;
+}
+
+[data-oc-control=ListControl] .oc-listitem {
+	padding: 0 !important;
+}
+
+[data-oc-control=ListControl] .oc-listitem .oc-listitem__status {
+	position: absolute;
+    margin: auto;
+    height: 56px !important;
+    width: 56px !important;
+    right: 50px;
+    top: 0;
+    bottom: 0;
+    border: solid 2px #35a7db !important;
+    border-radius: 50%;
+}
+
+[data-oc-control=ListControl] .oc-listitem .oc-listitem__status::before {
+	display: block;
+	content: '';
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 6px;
+	border-radius: 50%;
+	background-color: #35a7db;
+}
+
+[data-oc-control=ListControl] .oc-listitem .oc-listitem__text0 {
+	display: flex !important;
+	align-items: center !important;
+}
+
+[data-oc-control=ListControl] li[data-item-type=radio].selected::after {
+	background-color: #35a7db;
+}
