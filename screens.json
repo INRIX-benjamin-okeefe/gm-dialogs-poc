@@ -1,0 +1,29 @@
+[
+  {
+    "id": "Home",
+    "chambers": [
+      {
+        "id": "home-chamber",
+        "js": "screens/home-chamber.js"
+      }
+    ]
+  },
+  {
+    "id": "AddToScreen",
+    "chambers": [
+      {
+        "id": "add-to-chamber",
+        "js": "screens/add-to-chamber.js"
+      }
+    ]
+  },
+  {
+    "id": "ViewImagesScreen",
+    "chambers": [
+      {
+        "id": "view-images-chamber",
+        "js": "screens/view-images-chamber.js"
+      }
+    ]
+  }
+]
