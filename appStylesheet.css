@@ -1,3 +1,4 @@
+/* Add to chamber */
 #add-to-chamber [data-oc-control=ListControl] {
     height: 390px !important;
     width: 100% !important;
@@ -73,6 +74,23 @@
 	border-radius: 50%;
 	background-color: #35a7db;
 	right: 59px !important;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+}
+
+/* View images chamber */
+#view-images-chamber [data-oc-control=ListControl] .oc-listitem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#view-images-chamber [data-oc-control=ListControl] .oc-listitem .oc-icon {
+	position: absolute;
+}
+
+#view-images-chamber [data-oc-control=ListControl] .oc-scroll-control {
 	margin: auto;
 	top: 0;
 	bottom: 0;
