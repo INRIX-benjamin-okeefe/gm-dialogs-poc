@@ -1,12 +1,5 @@
-#add-to-chamber [data-oc-control=CustomButton] {
-	background-color: #35a7db !important;
-	border: 0;
-	text-shadow: 2px 2px #0e3140;
-	width: 300px !important;
-}
-
 #add-to-chamber [data-oc-control=ListControl] {
-    height: 70% !important;
+    height: 390px !important;
     width: 100% !important;
     margin: 0 !important;
 }
@@ -75,11 +68,11 @@
 	content: '';
 	display: block;
 	position: absolute !important;
-	height: 50px;
-	width: 50px;
+	height: 47px;
+	width: 47px;
 	border-radius: 50%;
 	background-color: #35a7db;
-	right: 58px !important;
+	right: 59px !important;
 	margin: auto;
 	top: 0;
 	bottom: 0;

@@ -6,43 +6,38 @@ define(function (require) {
 	return class extends ListChamber {
 		getListConfig () {
 			return {
-				layout: 'css'
+				layout: 'css',
+				itemClick: (eventKey, listControl, model, details) => {
+					console.log(model.get('action'));
+				}
 			}
 		}
 
 		data () {
 			return [
-				{ 'text': 'Add to Library' },
-				{ 'text': 'Add to Playlist' },
-				{ 'text': 'Create Station' }
+				{ text: 'Add to Library', action: 'library' },
+				{ text: 'Add to Playlist', action: 'playlist' },
+				{ text: 'Create Station', action: 'station' }
 			]
 		}
 
-		init (screen) {
-			return super.init(screen).then(() => {
-				this.buttonConfig = [
-                    {
-                    	"oc-control": "CustomButton",
-                        "label": "Cancel",
-                        "action": "cancelButtonClick"
-                    },
-                    {
-                    	"oc-control": "CustomButton",
-                        "label": "Ok",
-                        "action": "okButtonClick"
-                    }
-                ];
+		// init (screen) {
+		// 	return super.init(screen).then(() => {
+		// 		this.buttonConfig = [
+  //                   {
+  //                   	"oc-control": "CustomButton",
+  //                       "label": "Cancel",
+  //                       "action": "cancelButtonClick"
+  //                   },
+  //                   {
+  //                   	"oc-control": "CustomButton",
+  //                       "label": "Ok",
+  //                       "action": "okButtonClick"
+  //                   }
+  //               ];
 
-                this.setChamberButtons(this.buttonConfig);
-			});
-		}
-
-		cancelButtonClick () {
-			this.goto('home-chamber');
-		}
-
-		okButtonClick () {
-			console.log('ok button clicked');
-		}
+  //               this.setChamberButtons(this.buttonConfig);
+		// 	});
+		// }
 	}
 });
