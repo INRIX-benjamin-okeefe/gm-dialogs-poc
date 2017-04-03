@@ -1,7 +1,9 @@
 define(function (require) {
 	'use strict';
 
-	const ListChamber = require('common/platform/chamber/ListChamber');
+	const 
+		ListChamber = require('common/platform/chamber/ListChamber'),
+		showErrorState = true;
 
 	return class extends ListChamber {
 		getListConfig () {
@@ -15,11 +17,19 @@ define(function (require) {
 		}
 
 		data () {
-			return [
-				{ icon: `${window.MODULE_PATH}/images/yelp1.jpg` },
-				{ icon: `${window.MODULE_PATH}/images/yelp2.jpg` },
-				{ icon: `${window.MODULE_PATH}/images/yelp3.jpg` }
-			];
+			if (showErrorState) {
+				return [{
+					icon: `${window.MODULE_PATH}/images/image-load-error.png`,
+					text: 'Problem loading image. Please try again later.',
+					$class: 'error-view'
+				}];
+			} else {
+				return [
+					{ icon: `${window.MODULE_PATH}/images/yelp1.jpg` },
+					{ icon: `${window.MODULE_PATH}/images/yelp2.jpg` },
+					{ icon: `${window.MODULE_PATH}/images/yelp3.jpg` }
+				];
+			}
 		}
 	}
 });

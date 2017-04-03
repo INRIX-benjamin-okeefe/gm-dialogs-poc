@@ -86,8 +86,24 @@
 	justify-content: center;
 }
 
+#view-images-chamber [data-oc-control=ListControl] .oc-listitem.error-view {
+	display: block;
+}
+
 #view-images-chamber [data-oc-control=ListControl] .oc-listitem .oc-icon {
 	position: absolute;
+}
+
+#view-images-chamber [data-oc-control=ListControl] .oc-listitem.error-view .oc-icon {
+	position: relative;
+	width: 100%;
+	float: none;
+}
+
+#view-images-chamber [data-oc-control=ListControl] .oc-listitem.error-view .oc-listitem__text{
+	max-width: 100%;
+	margin: auto;
+	float: none;
 }
 
 #view-images-chamber [data-oc-control=ListControl] .oc-scroll-control {
