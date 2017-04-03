@@ -20,24 +20,5 @@ define(function (require) {
 				{ text: 'Create Station', action: 'station' }
 			]
 		}
-
-		// init (screen) {
-		// 	return super.init(screen).then(() => {
-		// 		this.buttonConfig = [
-  //                   {
-  //                   	"oc-control": "CustomButton",
-  //                       "label": "Cancel",
-  //                       "action": "cancelButtonClick"
-  //                   },
-  //                   {
-  //                   	"oc-control": "CustomButton",
-  //                       "label": "Ok",
-  //                       "action": "okButtonClick"
-  //                   }
-  //               ];
-
-  //               this.setChamberButtons(this.buttonConfig);
-		// 	});
-		// }
 	}
 });
